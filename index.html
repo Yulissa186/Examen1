@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Puzzle DFS</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #1e1e2f;
+            color: white;
+            text-align: center;
+        }
+
+        .card {
+            background: #2c2c3e;
+            padding: 20px;
+            margin: 50px auto;
+            width: 320px;
+            border-radius: 10px;
+        }
+
+        input {
+            padding: 10px;
+            width: 90%;
+            margin: 10px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        button {
+            padding: 10px;
+            background: #4CAF50;
+            border: none;
+            color: white;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .resultado {
+            margin-top: 20px;
+            background: #444;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h2>Puzzle DFS</h2>
+
+    <form method="GET">
+        <input type="text" name="inicio" placeholder="Estado inicial" required>
+        <input type="text" name="fin" placeholder="Estado objetivo" required>
+        <button type="submit">Resolver</button>
+    </form>
+
+    {% if resultado %}
+    <div class="resultado">
+        <h3>Resultado:</h3>
+        <p>{{ resultado }}</p>
+    </div>
+    {% endif %}
+</div>
+
+</body>
+</html>
